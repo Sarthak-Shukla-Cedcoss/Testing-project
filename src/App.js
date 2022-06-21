@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CakeContainer from "./Components/CakeContainer";
+import FormikComp from "./Components/FormikComp";
+import FormikComp1 from "./Components/FormikComp1";
+import Lodashcomp1 from "./Components/Lodashcomp1";
+import { Provider } from 'react-redux'
+import store from "./redux/store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div style={{ border: "1px", borderStyle: "dotted" }}>
+        <span>Formik form using formik and its form field</span>
+        <FormikComp />
+      </div>
+      <div style={{ border: "1px", borderStyle: "dotted" }}>
+        <span>useFormik()</span>
+        <FormikComp1 />
+      </div>
+      <div>
+        <span>Lodash</span>
+        <Lodashcomp1 />
+      </div>
+      <div>
+        <CakeContainer/>
+      </div>
+    </Provider>
   );
 }
 
