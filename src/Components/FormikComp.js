@@ -1,10 +1,8 @@
 import React from "react";
-import { buyCake } from '../redux'
-import { connect } from "react-redux";
+
 import { Formik, Field, Form } from "formik";
 
 function FormikComp(props) {
-  console.log(props);
   return (
     <Formik
       initialValues={{
@@ -39,16 +37,4 @@ function FormikComp(props) {
   );
 }
 
-const mapStateToProps = state =>{
-  return{
-      numOfCakes: state.numOfCakes
-  }
-}
-
-const mapDispatchToProps = dispatch =>{
-  return{
-      buyCake: ()=>dispatch(buyCake())
-  }
-}
-
-export default connect(mapStateToProps , mapDispatchToProps) (FormikComp);
+export default FormikComp;

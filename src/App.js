@@ -5,6 +5,7 @@ import FormikComp1 from "./Components/FormikComp1";
 import Lodashcomp1 from "./Components/Lodashcomp1";
 import { Provider } from 'react-redux'
 import store from "./redux/store";
+import HooksCakeContainer from "./Components/HooksCakeContainer";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
       </div>
       <div>
         <CakeContainer/>
+      </div>
+      <div>
+        <HooksCakeContainer/>
       </div>
     </Provider>
   );
